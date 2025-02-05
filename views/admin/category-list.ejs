@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("../partials/head")  %> 
+</head>
+<body>
+    
+    <%- include("../partials/nav")  %> 
+
+    <div class="container mt-3">
+          <div class="row">
+            <div class="col-md-12 mt-3">
+
+                <!--Guncelleme Islemi Yapildi Ise-->
+                <!--Kullaniciya Database Icindeki Data nin 
+                    Guncellendigini Bildiren Mesaj Yaziyoruz-->
+                <% if (action != "undefined" && action=="edit") { %>
+                    <div class="alert alert-success">
+                        <%= categoryid %> id numaralı kategori Güncelledi.
+                    </div>
+                <% } %>
+
+                <!--Ekleme Islemi Yapildi Ise-->
+                <!--Kullaniciya Database Icine 
+                    Data Eklendigini Bildiren Mesaj Yaziyoruz-->
+                <% if (action != "undefined" && action=="create") { %>
+                    <div class="alert alert-success">
+                        kategori Eklendi.
+                    </div>
+                <% } %>
+
+                <!--Silme Islemi Yapildi Ise-->
+                <!--Kullaniciya Database Icindeki 
+                    Data nin Silindigini Bildiren Mesaj Yaziyoruz-->
+                <% if (action != "undefined" && action=="delete") { %>
+                    <div class="alert alert-success">
+                        kategori Silindi.
+                    </div>
+                <% } %>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th style="width: 50px;">id</th>
+                            <th>Category Name</th>
+                            <th style="width: 130px;"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <!--Database Icinde Kayitli Olan Data lar Icinden-->
+                        <!--Istenilen Data lari Listeliyoruz-->
+                        <% categories.forEach(category => { %>
+                            <tr>
+                                <td>#<%= category.category_id %> </td>
+                                <td>
+                                    <%= category.category_name %> 
+                                </td>
+                                <td>
+                                    <a class="btn btn-sm btn-primary" href="/admin/categories/<%= category.category_id %>">Edit</a>
+                                    <a class="btn btn-sm btn-danger" href="/admin/category/delete/<%= category.category_id %>">Delete</a>
+                                </td>
+                            </tr>
+                        <% }) %>
+                    </tbody>
+                </table>
+            </div>
+          </div>
+    </div>
+</body>
+</html>

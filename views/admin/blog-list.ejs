@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("../partials/head")  %> 
+</head>
+<body>
+    
+    <%- include("../partials/nav")  %> 
+
+    <div class="container mt-3">
+          <div class="row">
+            <div class="col-md-12 mt-3">
+
+                <!--Guncelleme Islemi Yapildi Ise-->
+                <!--Kullaniciya Database Icindeki Data nin 
+                    Guncellendigini Bildiren Mesaj Yaziyoruz-->
+                <% if (action != "undefined" && action=="edit") { %>
+                    <div class="alert alert-success">
+                        <%= blogid %> id numaralı  blog Güncelledi.
+                    </div>
+                <% } %>
+
+                <!--Ekleme Islemi Yapildi Ise-->
+                <!--Kullaniciya Database Icine 
+                    Data Eklendigini Bildiren Mesaj Yaziyoruz-->
+                <% if (action != "undefined" && action=="create") { %>
+                    <div class="alert alert-success">
+                        Blog Eklendi.
+                    </div>
+                <% } %>
+
+                <!--Silme Islemi Yapildi Ise-->
+                <!--Kullaniciya Database Icindeki 
+                    Data nin Silindigini Bildiren Mesaj Yaziyoruz-->
+                <% if (action != "undefined" && action=="delete") { %>
+                    <div class="alert alert-success">
+                        Blog Silindi.
+                    </div>
+                <% } %>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th style="width: 50px;">id</th>
+                            <th style="width: 150px;">Course Photo</th>
+                            <th>Course Name</th>
+                            <th style="width: 130px;"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <!--Database Icinde Kayitli Olan Data lar Icinden
+                            Istenilen Data lari Listeliyoruz-->
+                        <% blogs.forEach(blog => { %>
+                            <tr>
+                                <td>#<%= blog.blog_id %> </td>
+                                <td>
+                                    <img src="/static/images/<%= blog.image %>" class="img-fluid" alt="">
+                                </td>
+                                <td>
+                                    <%= blog.title %> 
+                                </td>
+                                <td>
+                                    <a class="btn btn-sm btn-primary" href="/admin/blogs/<%= blog.blog_id %>">Edit</a>
+                                    <a class="btn btn-sm btn-danger" href="/admin/blog/delete/<%= blog.blog_id %>">Delete</a>
+                                </td>
+                            </tr>
+                        <% }) %>
+                    </tbody>
+                </table>
+            </div>
+          </div>
+    </div>
+</body>
+</html>
