@@ -20,3 +20,12 @@ Blog Kategori ve Fotoğraf ekleme silme güncelleme işlemlerini database üzeri
 
 ### Proje ve Database Arasındaki Bağlantının Kurulması
 Proje klasörü içinde ve config.js dosyasında database bağlantısı oluşturma
+
+# Nodemon
+Projede yapılan işlemlerin hızlı bir şekilde ekranda görünmesi için kullanıyoruz.
+
+# Express JS
+Node JS Frameeork kullanılarak web sayfalarının hızlı geliştirilmesinde Node JS ile haberleşmeyi gerçekleştirir.
+
+# EJS
+Web sayfalarında database'e gönderilen Request'in database'den gelen Response'unun dinamik olarak gelmesini sağlar.
