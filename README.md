@@ -1,3 +1,6 @@
+# Projenin Amacı
+MySQL database içindeki dataların admin paneli üzerinden alınması güncellemensi ve silinmesi.
+
 # Projenin Oluşturulması
 
 ## Routes Klasöründe User ve Admin İşlemlerinin Oluşturulması
