@@ -1,3 +1,15 @@
+# Project Screens
+![alt text](/ss/ss1.jpg)
+
+![alt text](/ss/ss2.jpg)
+
+![alt text](/ss/ss3.jpg)
+
+![alt text](/ss/ss4.jpg)
+
+![alt text](/ss/ss5.jpg)
+
+
 # Purpose of the Project
 Retrieving, updating and deleting data in MySQL database via admin panel.
 
