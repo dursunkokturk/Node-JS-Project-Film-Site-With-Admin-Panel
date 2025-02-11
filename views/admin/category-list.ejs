@@ -34,14 +34,14 @@
                     Data nin Silindigini Bildiren Mesaj Yaziyoruz-->
                 <% if (action != "undefined" && action=="delete") { %>
                     <div class="alert alert-success">
-                        kategori Silindi.
+                        Kategori Silindi.
                     </div>
                 <% } %>
                 <table class="table table-bordered table-striped">
                     <thead>
                         <tr>
                             <th style="width: 50px;">id</th>
-                            <th>Category Name</th>
+                            <th>Kategori Adı</th>
                             <th style="width: 130px;"></th>
                         </tr>
                     </thead>
@@ -56,8 +56,8 @@
                                     <%= category.category_name %> 
                                 </td>
                                 <td>
-                                    <a class="btn btn-sm btn-primary" href="/admin/categories/<%= category.category_id %>">Edit</a>
-                                    <a class="btn btn-sm btn-danger" href="/admin/category/delete/<%= category.category_id %>">Delete</a>
+                                    <a class="btn btn-sm btn-primary" href="/admin/categories/<%= category.category_id %>">Düzenle</a>
+                                    <a class="btn btn-sm btn-danger" href="/admin/category/delete/<%= category.category_id %>">Sil</a>
                                 </td>
                             </tr>
                         <% }) %>

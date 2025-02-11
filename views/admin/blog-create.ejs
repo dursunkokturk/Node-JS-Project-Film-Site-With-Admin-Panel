@@ -15,19 +15,19 @@
                     enctype Attribute unda multipart/form-data Ozelligini Kullanmak Gerekiyor-->
                 <form method="post" enctype="multipart/form-data">
                     <div class="row mb-3">
-                        <label for="title" class="col-sm-2 col-form-label">Course Title</label>
+                        <label for="title" class="col-sm-2 col-form-label">Kurs Başlığı</label>
                         <div class="col-sm-8">
                             <input type="text" class="form-control" id="title" name="title">
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <label for="subhead" class="col-sm-2 col-form-label">Subhead</label>
+                        <label for="subhead" class="col-sm-2 col-form-label">Altbaşlık</label>
                         <div class="col-sm-8">
                             <textarea name="subhead" class="form-control" rows="5"></textarea>
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <label for="description" class="col-sm-2 col-form-label">Description</label>
+                        <label for="description" class="col-sm-2 col-form-label">Açıklama</label>
                         <div class="col-sm-8">
 
                             <!--Aciklama Alaninda Yazilan Yazilarda Yapilan Islemleri Alabilmek Icin
@@ -37,7 +37,7 @@
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <label for="image" class="col-sm-2 col-form-label">Photo</label>
+                        <label for="image" class="col-sm-2 col-form-label">Fotograf</label>
                         <div class="col-sm-8">
 
                             <!--type Attribute unda text Yazar Ise 
@@ -48,13 +48,13 @@
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <label for="category" class="col-sm-2 col-form-label">Category</label>
+                        <label for="category" class="col-sm-2 col-form-label">Kategori</label>
                         <div class="col-sm-8">
                             <select name="category" id="category" class="form-select">
 
                                 <!--Select Box Icinde Secilen Bir Deger Yok Ise-->
                                 <!--Bu Durumun Kod Karsiligi -1 dir-->
-                                <option value="-1" selected>Select</option>
+                                <option value="-1" selected>Seçiniz</option>
 
                                 <!--Database Icindeki category Tablosunda Yer Alan Kategorileri-->
                                 <!--Tarama Islemini Yapiyoruz-->
@@ -70,7 +70,7 @@
                           <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="approval" name="approval">
                             <label class="form-check-label" for="approval">
-                                Homepage
+                                Anasayfa
                             </label>
                           </div>
                         </div>
@@ -80,14 +80,14 @@
                           <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="approval" name="approval">
                             <label class="form-check-label" for="approval">
-                                Approval
+                                Onay
                             </label>
                           </div>
                         </div>
                     </div>
                     <div class="row mb-3">
                         <div class="col-sm-8 offset-sm-2">
-                          <button type="submit" class="btn btn-primary">Save</button>
+                          <button type="submit" class="btn btn-primary">Kaydet</button>
                         </div>
                     </div>
                 </form>
