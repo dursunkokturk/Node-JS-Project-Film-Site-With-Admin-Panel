@@ -1,5 +1,5 @@
 # Projenin Amacı
-MySQL database içindeki dataların admin paneli üzerinden alınması güncellemensi ve silinmesi.
+MySQL database içindeki dataların admin paneli üzerinden alınması, güncellenmesi ve silinmesi.
 
 # Projenin Oluşturulması
 
