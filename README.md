@@ -45,8 +45,6 @@ It performs communication with Node JS for fast development of web pages using N
 # EJS
 It ensures that the Request sent to the database on web pages dynamically receives the Response from the database.
 
-Translated with www.DeepL.com/Translator (free version)
-
 # Steps in the Creation of the Project
 * Using Nodejs framework.
 * Using nodemon to quickly display the operations performed in the project on the screen.
